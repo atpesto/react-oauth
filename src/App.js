@@ -15,6 +15,16 @@ class App extends Component {
     const wakatimeRes = await axios.get(`http://localhost:9999/wakatime/authenticate/${code}`);
     const githubRes = await axios.get(`http://localhost:9999/github/authenticate/${code}`);
     console.log(wakatimeRes, githubRes);
+
+    /*
+    * wakatimeRes
+    * token: Object { "{\"access_token\":\"sec_qbhCduNk52kM9PpiIvkM2bQg8a7gT08v5lx3FyiX0cRypw2vfUVQimuCyoTn2feAOiFRNJQ6oS3pPyDw\",\"expires_in\":5184000,\"refresh_token\":\"ref_flWl7hvmLdFr9AN1kszj3b79gfXeJxSOcG9XJruPkZU54LXc4nYugJMfCqHqwB77cr5RYrcyxFCmqT51\",\"scope\":\"email,read_stats,read_logged_time\",\"token_type\":\"bearer\",\"uid\":\"c9b7a1d5-88f6-4385-aaec-5366471adc65\"}
+    */
+
+    /*
+    * githubRes
+    * token: Object { access_token: "f1d053324edd0521c8d652a6914ea34e0714d04f", scope: "repo,user", token_type: "bearer" }
+    */
   }
   render() {
     return (
